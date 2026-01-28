@@ -5,10 +5,11 @@ backend/__pycache__/
 
 # Node
 frontend/node_modules/
+node_modules/
+
+# Environment
+.env
 
 # Editor
 .vscode/
 .DS_Store
-
-# Env
-.env
