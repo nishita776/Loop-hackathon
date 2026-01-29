@@ -28,27 +28,3 @@ def compute_leaderboard(users_behavior):
 
     leaderboard.sort(key=lambda x: x["score"], reverse=True)
     return leaderboard
-
-
-# 🔹 local test
-if __name__ == "__main__":
-    users_behavior = {
-        "alice": {
-            "activity": 2.4,
-            "staleness_hours": 14,
-            "speed": 0.35,
-            "consistency": 0.6,
-            "mismatch": True
-        },
-        "bob": {
-            "activity": 4.8,
-            "staleness_hours": 2,
-            "speed": 0.9,
-            "consistency": 0.85,
-            "mismatch": False
-        }
-    }
-
-    leaderboard = compute_leaderboard(users_behavior)
-    for row in leaderboard:
-        print(row)
