@@ -34,25 +34,3 @@ def generate_alerts(user, behavior, task):
         })
 
     return alerts
-
-
-# 🔹 local test (optional but recommended)
-if __name__ == "__main__":
-    behavior = {
-        "activity": 0.6,
-        "staleness_hours": 14,
-        "speed": 0.3,
-        "consistency": 0.5,
-        "mismatch": True
-    }
-
-    task = {
-        "task_id": "T101",
-        "assignee": "alice",
-        "deadline_hours": 10,
-        "status": "in-progress"
-    }
-
-    alerts = generate_alerts("alice", behavior, task)
-    for alert in alerts:
-        print(alert)
